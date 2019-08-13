@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Brisqq_Shipping>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Shipping />
+			</depends>
+		</Brisqq_Shipping>
+	</modules>
+</config>

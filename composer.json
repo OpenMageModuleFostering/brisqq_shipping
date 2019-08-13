@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Brisqq_Shipping",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Brisqq delivery method integration",
+    "authors": [
+    {
+        "name": "Brisqq Ltd.",
+        "email": "hello@brisqq.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+
+
+
+	<checkout_onepage_index>
+
+		<reference name="head">
+
+			<action method="setThisCustomCssIsAllowed">
+				<flag>1</flag>
+			</action>
+
+
+
+			<block type="core/text" name="brisqq.base">
+				<action method="setText">
+					<text><![CDATA[<script type="text/javascript" src="//s3-eu-west-1.amazonaws.com/brisqq-assets/eapi/magento/default_production/brisqq-loader.js" data-brisqq></script>]]></text>
+				</action>
+			</block>
+
+
+
+		</reference>
+
+	</checkout_onepage_index>
+
+
+
+</layout>

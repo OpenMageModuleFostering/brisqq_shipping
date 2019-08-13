@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<modules>
+
+		<Brisqq_Shipping>
+			<module>0.0.1</module>
+		</Brisqq_Shipping>
+
+	</modules>
+
+	<global>
+
+		<blocks>
+			<brisqq_shipping>
+				<class>Brisqq_Shipping_Block</class>
+			</brisqq_shipping>
+		</blocks>
+
+		<models>
+			<brisqq_shipping>
+				<class>Brisqq_Shipping_Model</class>
+			</brisqq_shipping>
+		</models>
+
+		<events>
+
+			<!-- After each block is outputed, run our code that will check if it needs to append Brisqq template for that module -->
+			<core_block_abstract_to_html_after>
+				<observers>
+					<brisqq_shipping>
+						<type>singleton</type>
+						<class>Brisqq_Shipping_Model_Observer</class>
+						<method>saveBrisqqBackendJs</method>
+					</brisqq_shipping>
+				</observers>
+			</core_block_abstract_to_html_after>
+
+			<controller_action_predispatch_checkout_onepage_index>
+				<observers>
+					<brisqq_shipping>
+						<type>singleton</type>
+						<class>Brisqq_Shipping_Model_Observer</class>
+						<method>clearPreviousSession</method>
+					</brisqq_shipping>
+				</observers>
+			</controller_action_predispatch_checkout_onepage_index>
+
+			<checkout_controller_onepage_save_shipping_method>
+				<observers>
+					<brisqq_shipping>
+						<type>singleton</type>
+						<class>Brisqq_Shipping_Model_Observer</class>
+						<method>saveShippingMethod</method>
+					</brisqq_shipping>
+				</observers>
+			</checkout_controller_onepage_save_shipping_method>
+
+			<checkout_onepage_controller_success_action>
+				<observers>
+					<brisqq_shipping>
+						<type>singleton</type>
+						<class>Brisqq_Shipping_Model_Observer</class>
+						<method>confirmDelivery</method>
+					</brisqq_shipping>
+				</observers>
+			</checkout_onepage_controller_success_action>
+			<sales_order_place_after>
+				<observers>
+					<brisqq_shipping>
+						<type>singleton</type>
+						<class>Brisqq_Shipping_Model_Observer</class>
+						<method>updateDescriptionDateTime</method>
+					</brisqq_shipping>
+				</observers>
+			</sales_order_place_after>
+		</events>
+
+	</global>
+
+	<frontend>
+
+		<layout>
+			<updates>
+				<brisqq_shipping module="Brisqq_Shipping">
+					<file>brisqq_shipping.xml</file>
+				</brisqq_shipping>
+			</updates>
+		</layout>
+
+	</frontend>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <brisqq_shipping module="Brisqq_Shipping">
+                    <file>brisqq_shipping.xml</file>
+                </brisqq_shipping>
+            </updates>
+        </layout>
+    </adminhtml>
+
+	<!-- Default configuration -->
+	<default>
+
+		<carriers>
+
+			<brisqq_shipping>
+				<active>1</active>
+				<model>brisqq_shipping/carrier</model>
+				<title>Brisqq</title>
+				<timeslotDescription>Convenient, trackable delivery in selected 1-hour timeslot</timeslotDescription>
+				<coveredCities>London</coveredCities>
+				<sort_order>0</sort_order>
+				<sallowspecific>0</sallowspecific>
+			</brisqq_shipping>
+
+		</carriers>
+
+	</default>
+</config>

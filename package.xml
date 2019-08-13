@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Brisqq_Shipping</name>
+    <version>2.0.0</version>
+    <stability>stable</stability>
+    <license>GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Brisqq delivery method integration</summary>
+    <description>Brisqq harnesses the power of the crowd to enable seamless local delivery on demand.&#xD;
+&#xD;
+http://www.brisqq.com</description>
+    <notes>Release v2</notes>
+    <authors><author><name>Brisqq Ltd.</name><user>Brisqq</user><email>hello@brisqq.com</email></author></authors>
+    <date>2016-12-06</date>
+    <time>13:14:41</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Brisqq_Shipping.xml" hash="ebfba586a45b862b92c99751baacd99a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="brisqq_shipping.xml" hash="ac0a8b2003f6b54e34483bf63dcc7c41"/></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="brisqq_shipping.xml" hash="da185bd1949a9696ea762186d08321ff"/></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Brisqq"><dir name="Shipping"><dir name="etc"><file name="system.xml" hash="60deff9375beb2692404bce762667b05"/><file name="config.xml" hash="d79016b9e9dd9b4c862ed0a4434bc244"/></dir><dir name="Model"><file name="Carrier.php" hash="122638662b4611a44ce726afa874e40e"/><file name="Observer.php" hash="a659e43304c6190ff1ba30aa366492ad"/><file name="autoloader.php" hash="f4b7802c9f21b79b8336368a1d9b3fc9"/></dir></dir></dir></target><target name="mage"><dir name="var"><dir name="brisqq-assets"><file name="ChromePhp.php" hash="b829e1c2687849a67387ad8e4c55404f"/><file name="carrier.php" hash="e93a025411d0865d561daef58c7775d4"/><file name="custom-php-brisqq.php" hash="49ccfca95cc5aaa68bcd54ac8c445e8d"/><file name="observer.php" hash="b5aa675b9dc1322a5e1e07d3cc7b81b1"/></dir></dir><dir name="js"><file name="brisqq-price-tiers.js" hash="cf7b933f763eb84accb216de0922e203"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>8.0.0</max></php></required></dependencies>
+</package>
